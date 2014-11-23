@@ -14,6 +14,7 @@ split -l 4000000 training.txt
 *****************************************************************************
 1.)Linear Regression
 
+Using only depth and position as the features
 Exec 1 :
 alpha = 0.01
 num_iters = 1000
