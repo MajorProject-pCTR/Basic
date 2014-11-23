@@ -1,4 +1,3 @@
-fprintf('Loading the dataset.....\n');
 data = load('rand_sub.txt');
 
 y = data(:,1) ./ data(:,2);

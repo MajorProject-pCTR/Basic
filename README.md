@@ -15,6 +15,7 @@ split -l 4000000 training.txt
 1.)Linear Regression
 
 Using only depth and position as the features
+
 Exec 1 :
 alpha = 0.01
 num_iters = 1000
@@ -33,6 +34,9 @@ Test set accuracy : 95.192525
 xbl
 Cost = 0.021239 
 Test set accuracy : 94.969938 
+
+The above result is incorrect. "round" was used in predictAccuracy function, after removing "round" accuracy of all datasets are 0. 
+In regression problem, Cost itself is the best measure for accuracy.
 
 
 
