@@ -79,6 +79,10 @@ Avg_difference = 0.072037
 Predictions with difference less than 0.000100 = 5 out of 3000000 tuples
 Accuracy = 0.000167
 
+AUC  : 0.494707
+NWMAE: 65.516552
+WRMSE: 482.236432
+
 Onto test set xaa
 Cost = 0.020507 
 Max_difference = 0.976141
