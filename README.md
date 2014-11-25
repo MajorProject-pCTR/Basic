@@ -68,6 +68,44 @@ Predictions with difference less than 0.000100 = 0
  out of 1639105 tuplesAccuracy = 0.000000
 
 
+Exec 3
+alpha = 0.01
+num_iters = 1000
+
+Cost(Training dataset) = 0.017677 
+Max_difference = 0.976141
+Min_difference = 0.000017
+Avg_difference = 0.072037
+Predictions with difference less than 0.000100 = 5 out of 3000000 tuples
+Accuracy = 0.000167
+
+Onto test set xaa
+Cost = 0.020507 
+Max_difference = 0.976141
+Min_difference = 0.000588
+Avg_difference = 0.077556
+Predictions with difference less than 0.000100 = 0 out of 4000000 tuples
+Accuracy = 0.000000
+
+Onto test set xar
+Cost = 0.020270 
+Max_difference = 0.976141
+Min_difference = 0.000643
+Avg_difference = 0.077053
+Predictions with difference less than 0.000100 = 0 out of 4000000 tuples
+Accuracy = 0.000000
+
+Onto test set xbl
+Cost = 0.021239 
+Max_difference = 0.976141
+Min_difference = 0.000643
+Avg_difference = 0.079005
+Predictions with difference less than 0.000100 = 0 out of 1639105 tuples
+Accuracy = 0.000000
+
+
+
+
 
 
 

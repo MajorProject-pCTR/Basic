@@ -13,7 +13,7 @@ pause;
 fprintf('Starting Gradient Descent\n'); 
 
 alpha = 0.01;
-num_iters = 10000;
+num_iters = 1000;
 
 theta = zeros(size(X,2),1);
 [theta, J_history] = gradientDescent(X,y,theta,alpha,num_iters);
