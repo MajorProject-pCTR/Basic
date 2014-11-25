@@ -13,7 +13,7 @@ pause;
 fprintf('Starting Gradient Descent\n'); 
 
 alpha = 0.01;
-num_iters = 1000;
+num_iters = 10000;
 
 theta = zeros(size(X,2),1);
 [theta, J_history] = gradientDescent(X,y,theta,alpha,num_iters);
@@ -37,17 +37,15 @@ cost = 0;
 cost = computeCost(X, y, theta);
 
 fprintf('Cost(Training dataset) = %f \n', cost);
-pause;
 
-acc = findAccuracy(X, y, theta);
+findAccuracy(X, y, theta);
 
-fprintf('Training set accuracy : %f \n', acc);
 pause;
 
 %%%%%%
 
 fprintf('Onto test set xaa\n');
-pause;
+
 data = load('xaa');
 y_test = data(:,1) ./ data(:,2);
 X_test = data(:,[6,7]);
@@ -59,16 +57,13 @@ X_test = [ones(m_test,1) X_test];
 cost = computeCost(X_test, y_test, theta);
 
 fprintf('Cost = %f \n', cost);
-pause;
 
-acc = findAccuracy(X_test, y_test, theta);
-
-fprintf('Test set accuracy : %f \n', acc);
+findAccuracy(X_test, y_test, theta);
 
 %%%%%%
 
 fprintf('Onto test set xar\n');
-pause;
+
 data = load('xar');
 y_test = data(:,1) ./ data(:,2);
 X_test = data(:,[6,7]);
@@ -80,16 +75,13 @@ X_test = [ones(m_test,1) X_test];
 cost = computeCost(X_test, y_test, theta);
 
 fprintf('Cost = %f \n', cost);
-pause;
 
-acc = findAccuracy(X_test, y_test, theta);
-
-fprintf('Test set accuracy : %f \n', acc);
+findAccuracy(X_test, y_test, theta);
 
 %%%%%%
 
 fprintf('Onto test set xbl\n');
-pause;
+
 data = load('xbl');
 y_test = data(:,1) ./ data(:,2);
 X_test = data(:,[6,7]);
@@ -101,8 +93,5 @@ X_test = [ones(m_test,1) X_test];
 cost = computeCost(X_test, y_test, theta);
 
 fprintf('Cost = %f \n', cost);
-pause;
 
-acc = findAccuracy(X_test, y_test, theta);
-
-fprintf('Test set accuracy : %f \n', acc);
+findAccuracy(X_test, y_test, theta);

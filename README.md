@@ -38,6 +38,36 @@ Test set accuracy : 94.969938
 The above result is incorrect. "round" was used in predictAccuracy function, after removing "round" accuracy of all datasets are 0. 
 In regression problem, Cost itself is the best measure for accuracy.
 
+Exec 2 - Corrected findAccuracy
+alpha = 0.01
+num_iters = 10000
+
+Cost(Training dataset) = 0.017650 
+Max_difference = 0.989096
+Min_difference = 0.000093
+Predictions with difference less than 0.000100 = 1 out of 3000000 tuples
+Accuracy = 0.000033
+
+Onto test set xaa
+Cost = 0.020467 
+Max_difference = 0.989096
+Min_difference = 0.000246
+Predictions with difference less than 0.000100 = 0
+ out of 4000000 tuplesAccuracy = 0.000000
+Onto test set xar
+Cost = 0.020234 
+Max_difference = 0.989096
+Min_difference = 0.000246
+Predictions with difference less than 0.000100 = 0
+ out of 4000000 tuplesAccuracy = 0.000000
+Onto test set xbl
+Cost = 0.021194 
+Max_difference = 0.989096
+Min_difference = 0.000246
+Predictions with difference less than 0.000100 = 0
+ out of 1639105 tuplesAccuracy = 0.000000
+
+
 
 
 
