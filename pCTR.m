@@ -1,13 +1,24 @@
-data = load('rand_sub.txt');
+%data = load('rand_sub.txt');
 
 y = data(:,1) ./ data(:,2);
-X = data(:,[6,7]);
+X = data(:,[4:end]);
 
 m = length(y);
+%{
+fprintf('Adding Polynomial Features\n');
+X = addPolyFeatures(X);
+
+X = addQuadFeatures(X);
+fprintf('Training set Quad now\n');
+
+pause;
+%}
+fprintf("Normalizing Features ...\n");
+[X mu sigma] = featureNormalize(X);
+fprintf("Features normalized\n");
 
 X = [ones(m,1) X];
 
-fprintf('Loaded the dataset\n');
 pause;
 
 fprintf('Starting Gradient Descent\n'); 
@@ -43,7 +54,7 @@ findAccuracy(X, y, theta);
 pause;
 
 %%%%%%
-
+%{
 fprintf('Onto test set xaa\n');
 
 data = load('xaa');
@@ -95,3 +106,4 @@ cost = computeCost(X_test, y_test, theta);
 fprintf('Cost = %f \n', cost);
 
 findAccuracy(X_test, y_test, theta);
+%}

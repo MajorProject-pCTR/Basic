@@ -17,4 +17,10 @@ fprintf("Avg_difference = %f\n", avg_diff);
 fprintf("Predictions with difference less than %f = %d out of %d tuples\n", epsilon, count, m);
 fprintf("Accuracy = %f\n\n", acc);
 
+csvwrite("output.txt", h);
+csvwrite("comp_output.txt", 1-h);
+
+h = [h y];
+csvwrite("output_visualize", h);
+
 end
