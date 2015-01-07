@@ -246,4 +246,13 @@ WRMSE: 482.114418
 	WRMSE: 482.114511
 
 
+3.) Logistic Regression
+
+Gives -ve nos as ouput prediction : Somethin's wrong
+Iteration    25 | Cost: 1.502577e-01
+Max_difference = 5.669202
+Min_difference = 0.872683
+Avg_difference = 3.442850
+Predictions with difference less than 0.000100 = 0 out of 3000000 tuples
+Accuracy = 0.000000
 
