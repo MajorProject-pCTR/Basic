@@ -33,7 +33,7 @@ lambda = 10;
 
 all_theta = onevsall(X, y_class, num_labels, lambda);
 
-pred = predict(all_theta, X);
+pred = predict(all_theta, X)
 
 fprintf("Prediction ready\n");
 pause;
