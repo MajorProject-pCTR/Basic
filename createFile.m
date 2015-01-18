@@ -1,4 +1,4 @@
-data = load('rand_sub.txt');
+data = load('xaa');
 m = size(data);
 
 fprintf("Loaded the dataset\n");
