@@ -21,6 +21,6 @@ csvwrite("output.txt", h);
 csvwrite("comp_output.txt", 1-h);
 
 h = [h y];
-csvwrite("output_visualize", h);
+csvwrite("output_visualize.txt", h);
 
 end

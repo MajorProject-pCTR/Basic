@@ -248,8 +248,9 @@ WRMSE: 482.114418
 
 3.) Logistic Regression
 
-- lambda = 10
-
+-  Classification using threshold to get input class
+   lambda = 10
+   
 	Iteration    25 | Cost: 1.502577e-01	
 	Max_difference = 0.990707
 	Min_difference = 0.000013
@@ -261,4 +262,68 @@ WRMSE: 482.114418
 	AUC  : 0.496726
 	NWMAE: 65.515380
 	WRMSE: 482.237364
+
+-  Classification : using unrolled input file for training and testing
+   lambda = 10
+	Max_difference = 0.992339
+	Min_difference = 0.005959
+	Avg_difference = 0.067165
+	Predictions with difference less than 0.000100 = 0 out of 4740324 tuples
+	Accuracy = 0.000000
+
+   lambda = 0
+	Iteration    24 | Cost: 1.483745e-01
+	Max_difference = 0.992294
+	Min_difference = 0.006069
+	Avg_difference = 0.067166
+	Predictions with difference less than 0.000100 = 0 out of 4740324 tuples
+	Accuracy = 0.000000
+
+
+-   lambda = 0
+	
+Iteration    24 | Cost: 1.483745e-01
+Testing on unrolled.txt
+ans =
+
+   0.0864897
+   0.0864897
+   0.0864897
+   0.0252466
+   0.0252466
+   0.0089225
+   0.0230874
+   0.0322264
+   0.0424324
+   0.0212794
+
+Max_difference = 0.992294
+Min_difference = 0.006069
+Avg_difference = 0.067166
+Predictions with difference less than 0.000100 = 0 out of 4740324 tuples
+Accuracy = 0.000000
+
+Testing on rand_sub.txt
+
+ans =
+
+   1
+   0
+   0
+   0
+   0
+   0
+   0
+   1
+   0
+   0
+
+Max_difference = 1.000000
+Min_difference = 0.000000
+Avg_difference = 0.280002
+Predictions with difference less than 0.000100 = 2143142 out of 3000000 tuples
+Accuracy = 71.438067
+
+
+
 
