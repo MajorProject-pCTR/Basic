@@ -324,6 +324,9 @@ Avg_difference = 0.280002
 Predictions with difference less than 0.000100 = 2143142 out of 3000000 tuples
 Accuracy = 71.438067
 
+AUC  : 0.501540
+NWMAE: 65.663812
+WRMSE: 482.243269
 
 
 
