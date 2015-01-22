@@ -26,12 +26,12 @@ int main(){
 			input_file >> click >> impression >> display_url >> ad_id >> advertiser_id >> depth >> position >> query_id >> keyword_id >> title_id >> description_id >> user_id;	
 
 			for(j=1; j<=click; ++j){
-				output_file << index << "," << 1 << "," << display_url << "," << ad_id << "," << advertiser_id << "," << depth << "," << position << "," << query_id << "," << keyword_id << "," << title_id << "," << description_id << "," << user_id << "\n";
+				output_file << index << " " << 1 << " " << display_url << " " << ad_id << " " << advertiser_id << " " << depth << " " << position << " " << query_id << " " << keyword_id << " " << title_id << " " << description_id << " " << user_id << "\n";
 				index++;
 			}
 	
 			for(j=1; j<=impression-click; ++j){
-				output_file << index << "," << 0 << "," << display_url << "," << ad_id << "," << advertiser_id << "," << depth << "," << position << "," << query_id << "," << keyword_id << "," << title_id << "," << description_id << "," << user_id << "\n";
+				output_file << index << " " << 0 << " " << display_url << " " << ad_id << " " << advertiser_id << " " << depth << " " << position << " " << query_id << " " << keyword_id << " " << title_id << " " << description_id << " " << user_id << "\n";
 				index++;
 			}
 
