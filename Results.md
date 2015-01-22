@@ -281,7 +281,7 @@ WRMSE: 482.114418
 
 
 -   lambda = 0
-	
+(Here rand_sub.txt was not normalized)	
 Iteration    24 | Cost: 1.483745e-01
 Testing on unrolled.txt
 ans =
@@ -328,5 +328,52 @@ AUC  : 0.501540
 NWMAE: 65.663812
 WRMSE: 482.243269
 
+
+- lambda = 0
+(rand_sub.txt also normalized)
+Iteration    24 | Cost: 1.483745e-01
+Testing on unrolled.txt
+ans =
+
+   0.0864897
+   0.0864897
+   0.0864897
+   0.0252466
+   0.0252466
+   0.0089225
+   0.0230874
+   0.0322264
+   0.0424324
+   0.0212794
+
+Max_difference = 0.992294
+Min_difference = 0.006069
+Avg_difference = 0.067166
+Predictions with difference less than 0.000100 = 0 out of 4740324 tuples
+Accuracy = 0.000000
+
+Testing on rand_sub.txt
+ans =
+
+   0.0864897
+   0.0252466
+   0.0089225
+   0.0230874
+   0.0322264
+   0.0424324
+   0.0212794
+   0.0705155
+   0.0238761
+   0.0109745
+
+Max_difference = 0.992294
+Min_difference = 0.000002
+Avg_difference = 0.070445
+Predictions with difference less than 0.000100 = 10 out of 3000000 tuples
+Accuracy = 0.000333
+
+AUC  : 0.496635
+NWMAE: 65.515102
+WRMSE: 482.237307
 
 

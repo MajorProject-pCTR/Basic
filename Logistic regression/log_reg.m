@@ -38,7 +38,9 @@ fprintf("Testing on unrolled.txt");
 pause;
 
 pred = predict(all_theta, X);
+
 pred(1:10)
+
 findAccuracy(X, y, pred);
 
 
@@ -52,9 +54,13 @@ data = load('rand_sub.txt');
 y = data(:,1) ./ data(:,2);
 X = data(:,[4:end]);
 
+X = normalizeTestData(X,mu,sigma);
+
 m = length(y);
 X = [ones(m,1) X];
 
 pred = predict(all_theta, X);
+
 pred(1:10)
+
 findAccuracy(X, y, pred);
