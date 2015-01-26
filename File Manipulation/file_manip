@@ -1,0 +1,30 @@
+g++ createFile.cpp -o obj
+./obj
+
+python token_count.py descriptionid_tokensid.txt
+python token_count.py titleid_tokensid.txt
+python token_count.py purchasedkeywordid_tokensid.txt
+python token_count.py queryid_tokensid.txt
+
+sort -k 11,11 unrolled.txt > unrolled-sort.txt
+sort -k 1,1 tcnt_descriptionid_tokensid.txt > id-sort.txt
+
+join -1 11 -2 1 unrolled-sort.txt id-sort.txt > join.txt
+
+
+sort -k 11,11 join.txt > unrolled-sort.txt
+sort -k 1,1 tcnt_titleid_tokensid.txt > id-sort.txt
+
+join -1 11 -2 1 unrolled-sort.txt id-sort.txt > join.txt
+
+
+sort -k 11,11 join.txt > unrolled-sort.txt
+sort -k 1,1 tcnt_purchasedkeywordid_tokensid.txt > id-sort.txt
+
+join -1 11 -2 1 unrolled-sort.txt id-sort.txt > join.txt
+
+
+sort -k 11,11 join.txt > unrolled-sort.txt
+sort -k 1,1 tcnt_queryid_tokensid.txt > id-sort.txt
+
+join -1 11 -2 1 unrolled-sort.txt id-sort.txt > join.txt
