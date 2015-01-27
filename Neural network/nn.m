@@ -9,7 +9,7 @@ fprintf("Features normalized\n");
 
 fprintf("Data ready\n");
 
-pause;
+%pause;
 
 input_layer_size = 9;
 hidden_layer_size = 5;
@@ -19,7 +19,7 @@ theta1 = randInitializeWeights(input_layer_size, hidden_layer_size);
 theta2 = randInitializeWeights(hidden_layer_size, num_labels);
 nn_params = [theta1(:); theta2(:)];
 
-lambda = 1;
+lambda = 0;
 
 options = optimset('MaxIter', 100);
 costFunction = @(p) nnCostFunction(p, ...
@@ -39,7 +39,7 @@ Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):en
                  num_labels, (hidden_layer_size + 1));
 
 fprintf("Onto the prediction\n");
-pause;
+%pause;
 
 pred = predict(Theta1, Theta2, X);
 
