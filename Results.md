@@ -377,3 +377,79 @@ NWMAE: 65.515102
 WRMSE: 482.237307
 
 
+- Classification on join.txt : contains no. of tokens corresponding to each id
+
+1.)lambda = 0
+
+Iteration    16 | Cost: 1.472173e-01
+Prediction on training data
+
+
+ans =
+
+   0.013213
+   0.013370
+   0.022324
+   0.022169
+   0.044315
+   0.042052
+   0.039655
+   0.040530
+   0.038867
+   0.035696
+
+Max_difference = 0.999996
+Min_difference = 0.000001
+Avg_difference = 0.066963
+Predictions with difference less than 0.000100 = 106 out of 4740324 tuples
+Accuracy = 0.002236
+
+2.)lambda = 1
+
+Iteration    16 | Cost: 1.472174e-01
+Prediction on training data
+
+
+ans =
+
+   0.013213
+   0.013370
+   0.022324
+   0.022169
+   0.044315
+   0.042052
+   0.039655
+   0.040530
+   0.038867
+   0.035696
+
+Max_difference = 0.999996
+Min_difference = 0.000001
+Avg_difference = 0.066963
+Predictions with difference less than 0.000100 = 106 out of 4740324 tuples
+Accuracy = 0.002236
+
+3.)lambda = 10
+
+Iteration    16 | Cost: 1.472177e-01
+Prediction on training data
+
+ans =
+
+   0.013214
+   0.013371
+   0.022325
+   0.022170
+   0.044315
+   0.042051
+   0.039653
+   0.040528
+   0.038865
+   0.035695
+
+Max_difference = 0.999996
+Min_difference = 0.000001
+Avg_difference = 0.066963
+Predictions with difference less than 0.000100 = 106 out of 4740324 tuples
+Accuracy = 0.002236
+
