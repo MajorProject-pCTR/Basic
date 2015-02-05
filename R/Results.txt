@@ -1,0 +1,15 @@
+1.) Linear Regression : Depth, position as features
+	AUC  : 0.494480
+	NWMAE: 65.517885
+	WRMSE: 482.236221
+
+2.) Linear Regression : Depth, position as features - changed the scoreKDD code 
+	AUC  : 0.587052
+	NWMAE: 0.065110
+	WRMSE: 0.159080
+
+3.) Linear Regression : all features except display_url
+	AUC  : 0.627090
+	NWMAE: 0.064546
+	WRMSE: 0.158765 
+

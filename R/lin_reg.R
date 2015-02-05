@@ -13,5 +13,5 @@ head(h,10)
 compare <- data.frame(x=y, y=h)
 head(compare,10)
 
-write(h,file="pre.csv",sep=" ")
+write(h,file="pre.csv",sep="\n")
 
