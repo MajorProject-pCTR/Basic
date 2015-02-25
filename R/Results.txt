@@ -1,22 +1,33 @@
-1.) Linear Regression : Depth, position as features
-	AUC  : 0.494480
-	NWMAE: 65.517885
-	WRMSE: 482.236221
+Train - train_sub.txt : 6 * 10^5 rows
+Valid - valid_sub.txt : 2 * 10^5 rows
+Test  - test_sub.txt  : 2 * 10^5 rows
 
-2.) Linear Regression : Depth, position as features - changed the scoreKDD code 
-	AUC  : 0.587052
-	NWMAE: 0.065110
-	WRMSE: 0.159080
+Classification Algorithms use : unrolled.txt (unrolled version of train_sub.txt) for training and train_sub.txt for finding AUC for training set
 
-3.) Linear Regression : all features except display_url
-	AUC  : 0.627090
-	NWMAE: 0.064546
-	WRMSE: 0.158765 
+1.) Logistic Regression (using depth and position)
+	Time taken : 51.16744 secs
 
+	Train 
+	AUC  : 0.588407
+	NWMAE: 0.054225
+	WRMSE: 0.160161
 
----------------------------------------------------------------------------------------------------
+	Test
+	AUC  : 0.604889
+	NWMAE: 0.053350
+	WRMSE: 0.161013
 
-Using train_sub.txt, valid_sub.txt, test_sub.txt
+2.) Logistic Regression (using all features except ad_urlhash)
 
+	Time taken : 2.283041 mins
 
+	Train
+		AUC  : 0.614338
+		NWMAE: 0.055768
+		WRMSE: 0.160407
+
+	Test
+		AUC  : 0.627723
+		NWMAE: 0.055038
+		WRMSE: 0.161302
 

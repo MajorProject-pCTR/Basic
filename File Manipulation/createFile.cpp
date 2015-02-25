@@ -10,8 +10,8 @@ using namespace std;
 int main(){
 	int click, impression, depth, position, i, j, index;
 	char display_url[MAX], ad_id[ID_L], advertiser_id[ID_L], query_id[ID_L], keyword_id[ID_L], title_id[ID_L], description_id[ID_L], user_id[ID_L];
-	ifstream input_file ("rand_sub.txt");
-	ofstream output_file ("unrolled.txt");
+	ifstream input_file ("train_sub.txt");
+	ofstream output_file ("train_unrolled.txt");
 	
 	index = 1;
 
