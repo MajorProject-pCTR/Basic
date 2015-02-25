@@ -1,0 +1,17 @@
+AUC results : PYTHON
+
+Random Forest Classifier
+
+Training:
+AUC  : 0.981795
+NWMAE: 0.023739
+WRMSE: 0.083165
+
+Testing:
+AUC  : 0.619963
+NWMAE: 0.063154
+WRMSE: 0.169150
+
+
+SVR
+
