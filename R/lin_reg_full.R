@@ -1,23 +1,22 @@
-data <- read.table("rand_sub.txt")
-y <- data$V1 / data$V2
-ad_id <- data$V4
-advertiser_id <- data$V5
-depth <- data$V6
-pos <- data$V7
-query_id <- data$V8
-keyword_id <- data$V9
-title_id <- data$V10
-desc_id <- data$V11
-user_id <- data$V12
+linear_reg <- function(all=TRUE) {
 
-reg <- lm(y~ad_id+advertiser_id+depth+pos+query_id+keyword_id+title_id+desc_id+user_id)
-reg
-summary(reg)
+	ad_data <- read.table("train_sub.txt")
+	names(ad_data) <- c("click", "impression", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "query_id", "keyword_id", "title_id", "desc_id", "user_id")
 
-h<-predict(reg)
-head(h,10)
+	if(all){
+		start <- Sys.time()
+		reg <- lm(click/impression~ad_id+advertiser_id+depth+position+query_id+keyword_id+title_id+desc_id+user_id)
+		end <- Sys.time()
+	}
+	else{
+		start <- Sys.time()
+		reg <- lm(click/impression~depth+position)
+		end <- Sys.time()
+	}
 
-compare <- data.frame(x=y, y=h)
-head(compare,10)
+	write(h,file="pred_train.csv",sep="\n")
 
-write(h,file="pre_total.csv",sep="\n")
+	ad_data <- read.table("test_sub.txt")
+	names(ad_data) <- c("index", "if_click", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "query_id", "keyword_id", "title_id", "desc_id", "user_id")
+
+	write(h,file="pred_test.csv", sep="\n")
