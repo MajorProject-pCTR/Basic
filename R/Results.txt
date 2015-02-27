@@ -4,7 +4,36 @@ Test  - test_sub.txt  : 2 * 10^5 rows
 
 Classification Algorithms use : unrolled.txt (unrolled version of train_sub.txt) for training and train_sub.txt for finding AUC for training set
 
-1.) Logistic Regression (using depth and position)
+1.) Linear Regression (using depth and postion)
+	
+	Time taken : 0.7895734 secs
+
+	Train
+	AUC  : 0.588407
+	NWMAE: 0.064850
+	WRMSE: 0.159744
+
+	Test
+	AUC  : 0.604889
+	NWMAE: 0.064955
+	WRMSE: 0.160676
+
+2.) Linear Regression (using all features except ad_urlhash)
+
+	Time taken : 1.508615 secs
+
+	Train
+	AUC  : 0.624310
+	NWMAE: 0.064403
+	WRMSE: 0.159425
+
+	Test
+	AUC  : 0.641046
+	NWMAE: 0.064349
+	WRMSE: 0.160338
+
+3.) Logistic Regression (using depth and position)
+
 	Time taken : 51.16744 secs
 
 	Train 
@@ -17,17 +46,17 @@ Classification Algorithms use : unrolled.txt (unrolled version of train_sub.txt)
 	NWMAE: 0.053350
 	WRMSE: 0.161013
 
-2.) Logistic Regression (using all features except ad_urlhash)
+4.) Logistic Regression (using all features except ad_urlhash)
 
 	Time taken : 2.283041 mins
 
 	Train
-		AUC  : 0.614338
-		NWMAE: 0.055768
-		WRMSE: 0.160407
+	AUC  : 0.614338
+	NWMAE: 0.055768
+	WRMSE: 0.160407
 
 	Test
-		AUC  : 0.627723
-		NWMAE: 0.055038
-		WRMSE: 0.161302
+	AUC  : 0.627723
+	NWMAE: 0.055038
+	WRMSE: 0.161302
 

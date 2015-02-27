@@ -1,17 +1,31 @@
-data <- read.table("rand_sub.txt")
-y <- data$V1 / data$V2
-depth <- data$V6
-pos <- data$V7
+lin_reg <- function(all=TRUE) {
 
-reg <- lm(y~depth+pos)
-reg
-summary(reg)
+	ad_data <- read.table("train_sub.txt")
+	names(ad_data) <- c("click", "impression", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "query_id", "keyword_id", "title_id", "desc_id", "user_id")
 
-h<-predict(reg)
-head(h,10)
+	print("Loaded the data")
 
-compare <- data.frame(x=y, y=h)
-head(compare,10)
+	if(all){
+		start <- Sys.time()
+		lm.fit <- lm(click/impression~ad_id+advertiser_id+depth+position+query_id+keyword_id+title_id+desc_id+user_id, data=ad_data)
+		end <- Sys.time()
+	}
+	else{
+		start <- Sys.time()
+		lm.fit <- lm(click/impression~depth+position, data=ad_data)
+		end <- Sys.time()
+	}
 
-write(h,file="pre.csv",sep="\n")
+	print("Model trained")
 
+	h<-predict(lm.fit)
+	write(h,file="pred_train.csv",sep="\n")
+
+	ad_data <- read.table("test_sub.txt")
+	names(ad_data) <- c("index", "if_click", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "query_id", "keyword_id", "title_id", "desc_id", "user_id")
+
+	h<-predict(lm.fit,ad_data)
+	write(h,file="pred_test.csv", sep="\n")
+
+	diff <- end - start
+}
