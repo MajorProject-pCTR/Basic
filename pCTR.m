@@ -73,37 +73,3 @@ findAccuracy(X_test, y_test, theta);
 
 %%%%%%
 
-fprintf('Onto test set xar\n');
-
-data = load('xar');
-y_test = data(:,1) ./ data(:,2);
-X_test = data(:,[6,7]);
-
-m_test = length(y_test);
-
-X_test = [ones(m_test,1) X_test];
-
-cost = computeCost(X_test, y_test, theta);
-
-fprintf('Cost = %f \n', cost);
-
-findAccuracy(X_test, y_test, theta);
-
-%%%%%%
-
-fprintf('Onto test set xbl\n');
-
-data = load('xbl');
-y_test = data(:,1) ./ data(:,2);
-X_test = data(:,[6,7]);
-
-m_test = length(y_test);
-
-X_test = [ones(m_test,1) X_test];
-
-cost = computeCost(X_test, y_test, theta);
-
-fprintf('Cost = %f \n', cost);
-
-findAccuracy(X_test, y_test, theta);
-%}
