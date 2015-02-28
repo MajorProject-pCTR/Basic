@@ -1,5 +1,6 @@
-function acc = findAccuracy(X, y, h)
+function acc = findAccuracy(X, y, theta, op_file)
 
+h = X*theta;
 epsilon = 0.0001;
 m = length(y);
 
@@ -13,13 +14,12 @@ acc = (count/m)*100;
 fprintf("Max_difference = %f\n", max_diff);
 fprintf("Min_difference = %f\n", min_diff);
 fprintf("Avg_difference = %f\n", avg_diff);
-fprintf("Predictions with difference less than %f = %d out of %d tuples\n", epsilon, count, m);
-fprintf("Accuracy = %f\n\n", acc);
+%fprintf("Predictions with difference less than %f = %d out of %d tuples\n", epsilon, count, m);
+%fprintf("Accuracy = %f\n\n", acc);
 
-csvwrite("nn_output.txt", h);
-csvwrite("comp_nn_output.txt", 1-h);
+csvwrite(op_file, h);
 
-h = [h y];
-csvwrite("output_visualize_nn.txt", h);
+%h = [h y];
+%csvwrite("output_visualize.txt", h);
 
 end

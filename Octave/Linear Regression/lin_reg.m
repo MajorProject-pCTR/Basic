@@ -1,7 +1,7 @@
-%data = load('rand_sub.txt');
+data = load('../train_sub.txt');
 
 y = data(:,1) ./ data(:,2);
-X = data(:,[4:end]);
+X = data(:,[3:end]);
 
 m = length(y);
 %{
@@ -19,21 +19,24 @@ fprintf("Features normalized\n");
 
 X = [ones(m,1) X];
 
-pause;
+%pause;
 
 fprintf('Starting Gradient Descent\n'); 
 
-alpha = 0.01;
+alpha = 0.003;
 num_iters = 1000;
 
 theta = zeros(size(X,2),1);
+
+tic();
 [theta, J_history] = gradientDescent(X,y,theta,alpha,num_iters);
+time_taken = toc();
 
 fprintf("Gradient Descent Complete\n");
-pause;
+%pause;
 
-fprintf('initial 10 values of J\n');
-J_history(1:10)
+%fprintf('initial 10 values of J\n');
+%J_history(1:10)
 
 fprintf('final 10 values of J\n');
 J_history(num_iters-10+1:end)
@@ -47,19 +50,23 @@ ylabel('Cost J');
 cost = 0;
 cost = computeCost(X, y, theta);
 
-fprintf('Cost(Training dataset) = %f \n', cost);
+fprintf('Time taken for training = %f \n', time_taken)
 
-findAccuracy(X, y, theta);
+fprintf('Train \n');
+fprintf('Cost = %f \n\n', cost);
 
-pause;
+findAccuracy(X, y, theta, "../pred_train.csv");
 
-%%%%%%
-%{
-fprintf('Onto test set xaa\n');
+%pause;
 
-data = load('xaa');
+
+fprintf('Test \n');
+
+data = load('../test_sub.txt');
 y_test = data(:,1) ./ data(:,2);
-X_test = data(:,[6,7]);
+X_test = data(:,[3:end]);
+
+X_test = normalizeTestData(X_test, mu, sigma);
 
 m_test = length(y_test);
 
@@ -67,9 +74,6 @@ X_test = [ones(m_test,1) X_test];
 
 cost = computeCost(X_test, y_test, theta);
 
-fprintf('Cost = %f \n', cost);
+fprintf('Cost = %f \n\n', cost);
 
-findAccuracy(X_test, y_test, theta);
-
-%%%%%%
-
+findAccuracy(X_test, y_test, theta, "../pred_test.csv");
