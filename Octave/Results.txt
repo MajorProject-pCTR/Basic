@@ -1,0 +1,155 @@
+Time taken - in seconds
+
+1.) Linear Regression (depth and position)
+
+	a.)alpha=0.01 num_iters = 1000 (graph of cost vs iteration goes horizontal towards end)
+	Time taken for training = 24.227002 
+	Train 
+		Cost = 0.017565 
+
+		Max_difference = 0.988891
+		Min_difference = 0.000057
+		Avg_difference = 0.073485
+
+		AUC  : 0.588407
+		NWMAE: 0.064849
+		WRMSE: 0.159743
+	Test 
+		Cost = 0.017638 
+
+		Max_difference = 0.988891
+		Min_difference = 0.000555
+		Avg_difference = 0.073659
+
+		AUC  : 0.604889
+		NWMAE: 0.064960
+		WRMSE: 0.160676
+
+	b.)alpha=0.003 num_iters = 1000 (graph of cost vs iteration goes almost horizontal towards end)
+	Time taken for training = 24.193410 
+	Train 
+		Cost = 0.017569 
+
+		Max_difference = 0.988635
+		Min_difference = 0.000017
+		Avg_difference = 0.071777
+
+		AUC  : 0.588407
+		NWMAE: 0.063271
+		WRMSE: 0.159694
+	Test 
+		Cost = 0.017642 
+
+		Max_difference = 0.988635
+		Min_difference = 0.000060
+		Avg_difference = 0.071961
+
+		AUC  : 0.604889
+		NWMAE: 0.063422
+		WRMSE: 0.160647
+
+
+2.) Linear Regression (all features except ad_url)
+
+	a.)alpha=0.01 num_iters = 1000 (graph of cost vs iteration goes horizontal towards end)
+	Time taken for training = 51.958966 
+
+	Train
+		Cost = 0.017490 
+		 
+		Max_difference = 1.004386
+		Min_difference = 0.000001
+		Avg_difference = 0.073191
+
+		AUC  : 0.624458
+		NWMAE: 0.064410
+		WRMSE: 0.159424
+
+	Test
+		Cost = 0.017565
+		 
+		Max_difference = 1.002014
+		Min_difference = 0.000000
+		Avg_difference = 0.073440
+
+		AUC  : 0.641124
+		NWMAE: 0.064361
+		WRMSE: 0.160339
+
+	b.)alpha=0.003 num_iters = 1000 (graph of cost vs iteration goes almost horizontal towards end)
+
+	Time taken for training = 53.499216 
+
+	Train
+		Cost = 0.017494 
+
+		Max_difference = 1.003561
+		Min_difference = 0.000000
+		Avg_difference = 0.071494
+
+		AUC  : 0.626202
+		NWMAE: 0.062922
+		WRMSE: 0.159387
+
+	Test
+		Cost = 0.017569 
+
+		Max_difference = 1.001452
+		Min_difference = 0.000001
+		Avg_difference = 0.071746
+
+		AUC  : 0.641263
+		NWMAE: 0.062899
+		WRMSE: 0.160318
+
+3.) Linear Regression (all features)
+
+	a.)alpha=0.01 num_iters = 1000 (graph of cost vs iteration goes horizontal towards end)	
+
+	Time taken for training = 56.570771 
+	Train 
+		Cost = 0.017489 
+
+		Max_difference = 1.004208
+		Min_difference = 0.000001
+		Avg_difference = 0.073191
+
+		AUC  : 0.624998
+		NWMAE: 0.064402
+		WRMSE: 0.159420
+
+	Test 
+		Cost = 0.017565 
+
+		Max_difference = 1.002642
+		Min_difference = 0.000002
+		Avg_difference = 0.073444
+		
+		AUC  : 0.641728
+		NWMAE: 0.064272
+		WRMSE: 0.160324
+
+	b.)alpha=0.003 num_iters = 1000 (graph of cost vs iteration goes almost horizontal towards end)
+
+	Time taken for training = 57.984995 
+	Train 
+		Cost = 0.017493 
+
+		Max_difference = 1.003403
+		Min_difference = 0.000001
+		Avg_difference = 0.071493
+
+		AUC  : 0.626494
+		NWMAE: 0.062913
+		WRMSE: 0.159383
+
+	Test 
+		Cost = 0.017569 
+
+		Max_difference = 1.002059
+		Min_difference = 0.000002
+		Avg_difference = 0.071749
+
+		AUC  : 0.641793
+		NWMAE: 0.062810
+		WRMSE: 0.160303	
