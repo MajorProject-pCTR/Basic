@@ -152,4 +152,42 @@ Time taken - in seconds
 
 		AUC  : 0.641793
 		NWMAE: 0.062810
-		WRMSE: 0.160303	
+		WRMSE: 0.160303
+
+4.) Logistic Regression	(depth and position)
+
+	lambda = 0.5 : gave best results when tried with different values
+	Time taken for training = 36.428397
+
+	Train
+		Cost = 0.200681
+
+		AUC  : 0.588407
+		NWMAE: 0.039743
+		WRMSE: 0.162180
+
+	Test
+		Cost = 0.201392
+
+		AUC  : 0.604889
+		NWMAE: 0.038665
+		WRMSE: 0.162938
+
+5.) Logistic Regression (all features except ad_url)
+
+	lambda = 0.5 : gave best results when tried with different values
+	Time taken for training = 84.009262 
+
+	Train
+		Cost = 0.202354
+
+		AUC  : 0.610676
+		NWMAE: 0.039094
+		WRMSE: 0.162345
+
+	Test
+		Cost = 0.203212 
+
+		AUC  : 0.623103
+		NWMAE: 0.037938
+		WRMSE: 0.163082	
