@@ -1,7 +1,7 @@
 data = load('../train_sub.txt');
 
 y = data(:,1) ./ data(:,2);
-X = data(:,[3:end]);
+X = data(:,[4:end]);
 
 m = length(y);
 %{
@@ -64,7 +64,7 @@ fprintf('Test \n');
 
 data = load('../test_sub.txt');
 y_test = data(:,1) ./ data(:,2);
-X_test = data(:,[3:end]);
+X_test = data(:,[4:end]);
 
 X_test = normalizeTestData(X_test, mu, sigma);
 
