@@ -16,7 +16,7 @@ int main(){
 	index = 1;
 
 	if(input_file.is_open() && output_file.is_open()){
-		for(i=1; i<=3000000; ++i){
+		while(true){
 
 /*
 			fscanf(input_file, " %d %d %s %s %d %d %s %s %s %s %s", &click, &impression, display_url, ad_id, advertiser_id, &depth, &position, query_id, keyword_id, title_id, description_id, user_id);
@@ -24,6 +24,9 @@ int main(){
 */
 
 			input_file >> click >> impression >> display_url >> ad_id >> advertiser_id >> depth >> position >> query_id >> keyword_id >> title_id >> description_id >> user_id;	
+
+			if(input_file.eof())
+				break;
 
 			for(j=1; j<=click; ++j){
 				output_file << index << " " << 1 << " " << display_url << " " << ad_id << " " << advertiser_id << " " << depth << " " << position << " " << query_id << " " << keyword_id << " " << title_id << " " << description_id << " " << user_id << "\n";
