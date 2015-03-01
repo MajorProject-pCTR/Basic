@@ -34,29 +34,29 @@ Classification Algorithms use : unrolled.txt (unrolled version of train_sub.txt)
 
 3.) Logistic Regression (using depth and position)
 
-	Time taken : 51.16744 secs
+	Time taken : 7.727872 secs
 
 	Train 
 	AUC  : 0.588407
-	NWMAE: 0.054225
-	WRMSE: 0.160161
+	NWMAE: 0.061367
+	WRMSE: 0.159667
 
 	Test
 	AUC  : 0.604889
-	NWMAE: 0.053350
-	WRMSE: 0.161013
+	NWMAE: 0.061414
+	WRMSE: 0.160600
 
 4.) Logistic Regression (using all features except ad_urlhash)
 
-	Time taken : 2.283041 mins
+	Time taken : 11.25781 secs
 
 	Train
-	AUC  : 0.614338
-	NWMAE: 0.055768
-	WRMSE: 0.160407
+	AUC  : 0.629029
+	NWMAE: 0.061384
+	WRMSE: 0.159337
 
 	Test
-	AUC  : 0.627723
-	NWMAE: 0.055038
-	WRMSE: 0.161302
+	AUC  : 0.641467
+	NWMAE: 0.061288
+	WRMSE: 0.160282
 
