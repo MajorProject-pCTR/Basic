@@ -3,26 +3,26 @@ AUC results : PYTHON
 Linear Regression
 
 Time
-real	4m10.723s
-user	0m59.664s
-sys	0m4.668s
+real	0m20.475s
+user	0m20.061s
+sys	0m0.364s
 
 Training
-AUC  : 0.562751
-NWMAE: 0.057722
-WRMSE: 0.160247
+AUC  : 0.458495
+NWMAE: 1.589335
+WRMSE: 1.632850
 
 Testing
-AUC  : 0.576493
-NWMAE: 0.058984
-WRMSE: 0.160897
+AUC  : 0.446400
+NWMAE: 1.588117
+WRMSE: 1.632552
 
 Logistic Regression
 
 Time
-real	10m33.981s
-user	1m10.820s
-sys	0m9.297s
+real	0m26.393s
+user	0m25.866s
+sys	0m0.436s
 
 Training
 AUC  : 0.492987
@@ -37,20 +37,16 @@ WRMSE: 0.951525
 Random Forest Classifier
 
 Time
-
-real	12m43.769s
-user	4m6.927s
-sys	0m11.065s
+real	2m20.759s
+user	2m18.997s
+sys	0m1.144s
 
 Training
-AUC  : 0.981771
-NWMAE: 0.023774
-WRMSE: 0.083211
+AUC  : 0.981683
+NWMAE: 0.023923
+WRMSE: 0.083805
 
 Testing
-AUC  : 0.625420
-NWMAE: 0.062462
-WRMSE: 0.168483
-
-SVR
-
+AUC  : 0.621863
+NWMAE: 0.062994
+WRMSE: 0.168829
