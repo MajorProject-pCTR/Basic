@@ -3,7 +3,7 @@ from numpy import genfromtxt, savetxt
 
 def main():
     #create the training & test sets, skipping the header row with [1:]
-    dataset = genfromtxt(open('Data/train_unrolled.txt','r'), delimiter=' ', dtype='f8')[0:]    
+    dataset = genfromtxt(open('Data/unrolled_train.csv','r'), delimiter=',', dtype='f8')[0:]    
     target = [x[1] for x in dataset]
     train = [x[2:] for x in dataset]
     traindata = genfromtxt(open('Data/train_sub.csv','r'), delimiter=',', dtype='f8')[0:] #to find training data accuracy
