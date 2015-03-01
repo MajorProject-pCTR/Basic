@@ -2,8 +2,13 @@ Time taken - in seconds
 
 1.) Linear Regression (depth and position)
 
-	a.)alpha=0.01 num_iters = 1000 (graph of cost vs iteration goes horizontal towards end)
-	Time taken for training = 24.227002 
+	num_iters = 1000
+	best alpha = 0.01
+
+	Time taken for training = 26.320213
+
+	Min Cost for valid_data = 0.017547
+
 	Train 
 		Cost = 0.017565 
 
@@ -25,34 +30,14 @@ Time taken - in seconds
 		NWMAE: 0.064960
 		WRMSE: 0.160676
 
-	b.)alpha=0.003 num_iters = 1000 (graph of cost vs iteration goes almost horizontal towards end)
-	Time taken for training = 24.193410 
-	Train 
-		Cost = 0.017569 
-
-		Max_difference = 0.988635
-		Min_difference = 0.000017
-		Avg_difference = 0.071777
-
-		AUC  : 0.588407
-		NWMAE: 0.063271
-		WRMSE: 0.159694
-	Test 
-		Cost = 0.017642 
-
-		Max_difference = 0.988635
-		Min_difference = 0.000060
-		Avg_difference = 0.071961
-
-		AUC  : 0.604889
-		NWMAE: 0.063422
-		WRMSE: 0.160647
-
-
 2.) Linear Regression (all features except ad_url)
 
-	a.)alpha=0.01 num_iters = 1000 (graph of cost vs iteration goes horizontal towards end)
-	Time taken for training = 51.958966 
+	num_iters = 1000
+	best alpha = 0.01
+
+	Time taken for training = 54.918067
+
+	Min Cost for valid_data = 0.017479
 
 	Train
 		Cost = 0.017490 
@@ -76,37 +61,15 @@ Time taken - in seconds
 		NWMAE: 0.064361
 		WRMSE: 0.160339
 
-	b.)alpha=0.003 num_iters = 1000 (graph of cost vs iteration goes almost horizontal towards end)
-
-	Time taken for training = 53.499216 
-
-	Train
-		Cost = 0.017494 
-
-		Max_difference = 1.003561
-		Min_difference = 0.000000
-		Avg_difference = 0.071494
-
-		AUC  : 0.626202
-		NWMAE: 0.062922
-		WRMSE: 0.159387
-
-	Test
-		Cost = 0.017569 
-
-		Max_difference = 1.001452
-		Min_difference = 0.000001
-		Avg_difference = 0.071746
-
-		AUC  : 0.641263
-		NWMAE: 0.062899
-		WRMSE: 0.160318
-
 3.) Linear Regression (all features)
 
-	a.)alpha=0.01 num_iters = 1000 (graph of cost vs iteration goes horizontal towards end)	
+	num_iters = 1000
+	best alpha = 0.01
 
-	Time taken for training = 56.570771 
+	Time taken for training = 56.048276
+
+	Min Cost for valid_data = 0.017479
+
 	Train 
 		Cost = 0.017489 
 
@@ -129,65 +92,63 @@ Time taken - in seconds
 		NWMAE: 0.064272
 		WRMSE: 0.160324
 
-	b.)alpha=0.003 num_iters = 1000 (graph of cost vs iteration goes almost horizontal towards end)
-
-	Time taken for training = 57.984995 
-	Train 
-		Cost = 0.017493 
-
-		Max_difference = 1.003403
-		Min_difference = 0.000001
-		Avg_difference = 0.071493
-
-		AUC  : 0.626494
-		NWMAE: 0.062913
-		WRMSE: 0.159383
-
-	Test 
-		Cost = 0.017569 
-
-		Max_difference = 1.002059
-		Min_difference = 0.000002
-		Avg_difference = 0.071749
-
-		AUC  : 0.641793
-		NWMAE: 0.062810
-		WRMSE: 0.160303
-
 4.) Logistic Regression	(depth and position)
 
 	lambda = 0.5 : gave best results when tried with different values
-	Time taken for training = 36.428397
+	Time taken for training = 9.892461
 
 	Train
-		Cost = 0.200681
+		Cost = 0.161526
 
 		AUC  : 0.588407
-		NWMAE: 0.039743
-		WRMSE: 0.162180
+		NWMAE: 0.061659
+		WRMSE: 0.159668
 
 	Test
-		Cost = 0.201392
+		Cost = 0.162081
 
 		AUC  : 0.604889
-		NWMAE: 0.038665
-		WRMSE: 0.162938
+		NWMAE: 0.061714
+		WRMSE: 0.160602
 
 5.) Logistic Regression (all features except ad_url)
 
-	lambda = 0.5 : gave best results when tried with different values
-	Time taken for training = 84.009262 
+	Best lambda = 0
+	Cost for valid_data = 0.160018 
+
+	Time taken for training = 16.486638 
 
 	Train
-		Cost = 0.202354
+		Cost = 0.159737
 
-		AUC  : 0.610676
-		NWMAE: 0.039094
-		WRMSE: 0.162345
+		AUC  : 0.628339
+		NWMAE: 0.061208
+		WRMSE: 0.159334
 
 	Test
-		Cost = 0.203212 
+		Cost = 0.160387 
 
-		AUC  : 0.623103
-		NWMAE: 0.037938
-		WRMSE: 0.163082	
+		AUC  : 0.640716
+		NWMAE: 0.061112
+		WRMSE: 0.160277
+
+6.) Neural Network (all features except ad_url)
+
+	Best lambda = 0.5 Opt hidden layer size = 5 iteration = 100
+
+	Cost for valid_data = 0.158756
+	Time taken for training = 368.599383
+
+	Train
+		Cost = 0.158379
+
+		AUC  : 0.649975
+		NWMAE: 0.059721
+		WRMSE: 0.159016		
+
+	Test
+		Cost = 0.159229
+
+		AUC  : 0.658944
+		NWMAE: 0.059549
+		WRMSE: 0.159945	

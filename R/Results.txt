@@ -2,7 +2,7 @@ Train - train_sub.txt : 6 * 10^5 rows
 Valid - valid_sub.txt : 2 * 10^5 rows
 Test  - test_sub.txt  : 2 * 10^5 rows
 
-Classification Algorithms use : unrolled.txt (unrolled version of train_sub.txt) for training and train_sub.txt for finding AUC for training set
+Classification Algorithms use : train_unrolled.txt (unrolled version of train_sub.txt) for training and train_sub.txt for finding AUC for training set
 
 1.) Linear Regression (using depth and postion)
 	

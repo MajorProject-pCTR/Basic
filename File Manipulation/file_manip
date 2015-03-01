@@ -28,3 +28,6 @@ sort -k 11,11 join.txt > unrolled-sort.txt
 sort -k 1,1 tcnt_queryid_tokensid.txt > id-sort.txt
 
 join -1 11 -2 1 unrolled-sort.txt id-sort.txt > join.txt
+
+g++ modify_join.cpp -o obj
+./obj
