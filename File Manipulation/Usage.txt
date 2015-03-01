@@ -1,0 +1,7 @@
+1.) make sure you have all *id files in this directory
+2.) sh file_manip_first
+3.) bring required file to this directory and rename it to input.txt
+4.) sh file_manip    - creates improved_join.txt (unrolled form in neat structure)
+5.) sh file_manip2   - creates improved_join_orig.txt (non-unrolled form in neat structure)
+6.) repeat steps 3 to 5 for other files
+	
