@@ -11,7 +11,7 @@ int main(){
 	int click, impression, depth, position, index, desc_id_tokencnt, titid_tokencnt, purc_k_id_tokencnt, qid_tokencnt;
 	char display_url[MAX], ad_id[ID_L], advertiser_id[ID_L], qid[ID_L], purc_k_id[ID_L], titid[ID_L], desc_id[ID_L], user_id[ID_L];
 	ifstream input_file ("join.txt");
-	ofstream output_file ("improved_join.txt");
+	ofstream output_file ("improved_join_orig.txt");
 
 	if(input_file.is_open() && output_file.is_open()){
 		while(true){
@@ -21,7 +21,7 @@ int main(){
 			if(input_file.eof())
 				break;
 				
-			output_file << click << " " << impression << " " << display_url << " " << ad_id << " " << advertiser_id << " " << depth << " " << position << " " << user_id << " " << desc_id << " " << desc_id_tokencnt << " " << titid << " " << titid_tokencnt << " " << purc_k_id_tokencnt << " " << qid << " " << qid_tokencnt << " " << user_id;
+			output_file << click << " " << impression << " " << display_url << " " << ad_id << " " << advertiser_id << " " << depth << " " << position << " " << user_id << " " << desc_id << " " << desc_id_tokencnt << " " << titid << " " << titid_tokencnt << " " << purc_k_id_tokencnt << " " << qid << " " << qid_tokencnt << " " << user_id << "\n";
 
 		}
 		input_file.close();
