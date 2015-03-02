@@ -1,0 +1,17 @@
+i/p : o/p of unrolled and o/p of non-unrolled
+	train on unrolled, valid on non-unrolled, test on non-unrolled
+
+so features -> unrolled and non-unrolled o/p on train, non-unrolled on valid, non-unrolled on test
+
+non-unrolled file format : click, impr, {lin_reg, log_reg, nn}(non-unrolled o/p)
+unrolled file format : if_click, {lin_reg, log_reg, nn}(unrolled o/p)
+
+o/p : o/p for (o/p of non-unrolled)
+
+to check AUC : csv :
+i/p : click,impr,lin_reg,log_reg,nn
+o/p : CTR for non-unrolled
+
+
+Requirements in this directory :
+train_improved_join.txt, train_improved_join_orig.txt, valid_improved_join_orig.txt, test_improved_join_orig.txt
