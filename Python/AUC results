@@ -80,9 +80,9 @@ Logistic Regression
 		sys	0m0.768s
 
 	Training
-		AUC  : 0.507160
-		NWMAE: 0.111920
-		WRMSE: 0.208986
+		AUC  : 0.502827
+		NWMAE: 0.112623
+		WRMSE: 0.209771
 
 	Testing
 		AUC  : 0.474355
