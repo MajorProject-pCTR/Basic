@@ -267,7 +267,7 @@ real	0m31.179s
 user	0m2.940s
 sys	0m6.496s
 
-Ensemble of Linear Regression and Nueral Network with 8 nodes in hidden layer(Using Nueral Network with 2 nodes in hidden layer):
+Ensemble of Linear Regression and Nueral Network with 8 nodes in hidden layer(Using NN with 2 nodes in hidden layer):
 
 Training:
 AUC  : 0.515330
@@ -286,3 +286,43 @@ WRMSE: 0.161917
 real	0m8.834s
 user	0m2.132s
 sys	0m5.152s
+
+Ensemble of Linear Regression and Nueral Network with 8 nodes in hidden layer(Using NN with 1 node in hidden layer):
+
+Training:
+AUC  : 0.526066
+NWMAE: 0.065036
+WRMSE: 0.160381
+
+real	0m9.175s
+user	0m2.316s
+sys	0m5.140s
+
+Testing:
+AUC  : 0.490497
+NWMAE: 0.065624
+WRMSE: 0.161831
+
+real	0m9.242s
+user	0m2.244s
+sys	0m5.052s
+
+Ensemble of Linear Regression and Nueral Network with 8 nodes in hidden layer(Using Linear Regression):
+
+Training:
+AUC  : 0.556894
+NWMAE: 0.064776
+WRMSE: 0.160252
+
+real	0m28.621s
+user	0m6.540s
+sys	0m13.300s
+
+Testing:
+AUC  : 0.533243
+NWMAE: 0.065134
+WRMSE: 0.161570
+
+real	0m10.838s
+user	0m2.184s
+sys	0m4.704s
