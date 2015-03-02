@@ -82,6 +82,9 @@ for lambda = lambda_list
 		best_lambda = lambda;
 		best_hl_size = hidden_layer_size;
 
+	else
+		break;
+
 	endif
 
 end
