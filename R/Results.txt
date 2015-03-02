@@ -86,16 +86,18 @@ test_improved_join.txt
 	NWMAE: 0.064371
 	WRMSE: 0.160195
 
-6.) Logistic Regression (joined) - Gives very poor results : equivalent to random prediction - here all predictions are 1
+6.) Logistic Regression (joined)
 
-	Time taken : 13.66307 secs
+	Time taken : 13.78439 secs
 
 	Train
-	AUC  : 0.500000
-	NWMAE: 0.965244
-	WRMSE: 0.978421
+	AUC  : 0.638545
+	NWMAE: 0.061045
+	WRMSE: 0.159196
+
 
 	Test
-	AUC  : 0.500000
-	NWMAE: 0.966645
-	WRMSE: 0.979965
+	AUC  : 0.650791
+	NWMAE: 0.060981
+	WRMSE: 0.160105
+
