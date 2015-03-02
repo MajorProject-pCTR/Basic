@@ -1,0 +1,228 @@
+Linear regression:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m26.746s
+user	0m6.384s
+sys	0m15.368s
+
+Testing:
+AUC  : 0.640649
+NWMAE: 0.068446
+WRMSE: 0.160576
+
+real	0m8.724s
+user	0m1.796s
+sys	0m5.116s
+
+Linear REgression with Quantile loss function:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m31.350s
+user	0m6.080s
+sys	0m15.028s
+
+Testing:
+AUC  : 0.569616
+NWMAE: 0.033565
+WRMSE: 0.164357
+
+real	0m17.080s
+user	0m2.748s
+sys	0m6.672s
+
+Nueral Network with 2 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m9.267s
+user	0m2.620s
+sys	0m5.300s
+
+Validation:
+AUC  : 0.533206
+NWMAE: 0.064288
+WRMSE: 0.162770
+
+real	0m8.863s
+user	0m2.560s
+sys	0m4.516s
+
+Nueral Network with 3 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m11.417s
+user	0m2.680s
+sys	0m5.380s
+
+Validation:
+AUC  : 0.599246
+NWMAE: 0.064570
+WRMSE: 0.162440
+
+real	0m9.964s
+user	0m2.416s
+sys	0m4.700s
+
+Nueral Network with 4 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m11.862s
+user	0m2.468s
+sys	0m5.740s
+
+Validation:
+AUC  : 0.592788
+NWMAE: 0.064123
+WRMSE: 0.162481
+
+real	0m10.989s
+user	0m2.688s
+sys	0m4.544s
+
+Nueral Network with 5 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m11.455s
+user	0m3.116s
+sys	0m5.072s
+
+Validation:
+AUC  : 0.604052
+NWMAE: 0.064012
+WRMSE: 0.162720
+
+real	0m9.341s
+user	0m2.532s
+sys	0m4.724s
+
+Testing:
+AUC  : 0.602947
+NWMAE: 0.063725
+WRMSE: 0.160964
+
+real	0m8.078s
+user	0m2.700s
+sys	0m4.344s
+
+Nueral Network with 6 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m9.010s
+user	0m2.916s
+sys	0m5.168s
+
+Validation:
+AUC  : 0.570164
+NWMAE: 0.063914
+WRMSE: 0.162673
+
+real	0m9.983s
+user	0m2.724s
+sys	0m4.616s
+
+Nueral Network with 7 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m12.564s
+user	0m3.204s
+sys	0m5.604s
+
+Validation:
+AUC  : 0.558550
+NWMAE: 0.063943
+WRMSE: 0.162729
+
+real	0m8.410s
+user	0m2.216s
+sys	0m5.272s
+
+Nueral Network with 8 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m12.706s
+user	0m3.556s
+sys	0m5.148s
+
+Validation:
+AUC  : 0.563139
+NWMAE: 0.063851
+WRMSE: 0.162741
+
+real	0m10.015s
+user	0m2.312s
+sys	0m5.440s
+
+Nueral Network with 9 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m13.924s
+user	0m3.716s
+sys	0m5.296s
+
+Validation:
+AUC  : 0.566230
+NWMAE: 0.063853
+WRMSE: 0.162782
+
+real	0m11.993s
+user	0m1.804s
+sys	0m6.088s
+
+Nueral Network with 10 nodes in hidden layer:
+
+Training:
+AUC  : 0.637832
+NWMAE: 0.063681
+WRMSE: 0.159888
+
+real	0m9.764s
+user	0m3.660s
+sys	0m5.104s
+
+Validation:
+AUC  : 0.552029
+NWMAE: 0.063972
+WRMSE: 0.162751
+
+real	0m9.957s
+user	0m2.832s
+sys	0m4.484s
