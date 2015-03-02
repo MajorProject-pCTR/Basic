@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
 	int click, impression, i;
-	char nn_fname[MAX], log_fname[MAX], lin_fname[MAX], op_name[MAX];
+	char ip_fname[MAX], nn_fname[MAX], log_fname[MAX], lin_fname[MAX], op_name[MAX], dummy[MAX];
 	double nn_ctr, log_ctr, lin_ctr;
 
 	cin >> ip_fname >> nn_fname >> log_fname >> lin_fname >> op_name;
@@ -23,7 +23,7 @@ int main(){
 	if(input_file.is_open() && input_file_nn.is_open() && input_file_log.is_open() && input_file_lin.is_open() && output_file.is_open()){
 		while(true){
 
-			input_file >> click >> impression;
+			input_file >> click >> impression >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy;
 			input_file_nn >> nn_ctr;
 			input_file_log >> log_ctr;
 			input_file_lin >> lin_ctr;

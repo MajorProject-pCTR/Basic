@@ -3,10 +3,10 @@
 %y = data(:,6);			
 %X = data(:,[8:end]);
 
-data = load('../train_improved_join.txt');
+data = load('../unrolled_ensemble.txt');
 
 y = data(:,1);
-X = data(:,[3:end]);
+X = data(:,[2:end]);
 
 fprintf("Normalizing Features ...\n");
 [X mu sigma] = featureNormalize(X);
@@ -15,27 +15,27 @@ fprintf("Features normalized\n");
 fprintf("Data ready\n");
 
 %loading train_sub
-train_data = load('../train_improved_join_orig.txt');
+train_data = load('../train_ip_ensemble.txt');
 
-X_train = train_data(:,[4:end]);
+X_train = train_data(:,[3:end]);
 y_train = train_data(:,1) ./ train_data(:,2);
 
 [X_train mu sigma] = featureNormalize(X_train);
 
 %loading valid_sub
-valid_data = load('../valid_improved_join_orig.txt');
+valid_data = load('../valid_ip_ensemble.txt');
 y_valid = valid_data(:,1) ./ valid_data(:,2);
-X_valid = valid_data(:,[4:end]);
+X_valid = valid_data(:,[3:end]);
 
 X_valid = normalizeTestData(X_valid, mu, sigma);
 
 %pause;
 
-input_layer_size = 13;
+input_layer_size = 3;
 
 num_labels = 1;
 
-hidd_lay_sizes = [6 7 8];
+hidd_lay_sizes = [1 2 3];
 
 lambda_list = [0 0.25 0.5 0.75 1 5 10];
 
@@ -82,9 +82,6 @@ for lambda = lambda_list
 		best_lambda = lambda;
 		best_hl_size = hidden_layer_size;
 
-	else
-		break;
-
 	endif
 
 end
@@ -121,9 +118,9 @@ findAccuracy(X_train, y_train, pred, '../pred_train.csv')
 fprintf("Test\n");
 %pause;
 
-data = load('../test_improved_join_orig.txt');
+data = load('../test_ip_ensemble.txt');
 
-X = data(:,[4:end]);
+X = data(:,[3:end]);
 y = data(:,1) ./ data(:,2);
 
 X = normalizeTestData(X, mu, sigma);

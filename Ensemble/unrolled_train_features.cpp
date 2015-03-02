@@ -8,6 +8,7 @@ using namespace std;
 int main(){
 	int if_click, i;
 	double nn_ctr, log_ctr, lin_ctr;
+	char dummy[MAX];	
 
 	ifstream input_file ("train_improved_join.txt");
 	ifstream input_file_nn ("nn_train_unrolled.csv");
@@ -20,7 +21,7 @@ int main(){
 	if(input_file.is_open() && input_file_nn.is_open() && input_file_log.is_open() && input_file_lin.is_open() && output_file.is_open()){
 		while(true){
 
-			input_file >> if_click;
+			input_file >> if_click >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy;
 			input_file_nn >> nn_ctr;
 			input_file_log >> log_ctr;
 			input_file_lin >> lin_ctr;	
