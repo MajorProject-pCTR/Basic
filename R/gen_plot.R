@@ -1,7 +1,7 @@
 gen_plot <- function() {
 
 	ad_data <- read.table("train_sub.txt")
-	names(ad_data) <- c("click", "impression", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "query_id", "keyword_id", "title_id", "desc_id", "user_id")
+	names(ad_data) <- c("click", "impression", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "user_id", "desc_id", "desc_id_tokencnt", "title_id", "title_id_tokencnt", "purc_key_id", "purc_key_id_tokencnt", "query_id", "query_id_tokencnt")
 
 	print("data loaded")
 
