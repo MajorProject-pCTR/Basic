@@ -35,7 +35,7 @@ input_layer_size = 13;
 
 num_labels = 1;
 
-hidd_lay_sizes = [4 5 6];
+hidd_lay_sizes = [6 7 8];
 
 lambda_list = [0 0.25 0.5 0.75 1 5 10];
 
