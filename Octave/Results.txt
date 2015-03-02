@@ -208,19 +208,20 @@ Time taken - in seconds
 
 	Best lambda = 0 Opt hidden layer size = 6 iteration = 100
 
-	Cost for valid_data = 0.157980
+	Cost for valid_data = 0.157699
 	Time taken for training = 330.882975
-	Train
-		Cost = 0.157768
 
-		AUC  : 0.670202
-		NWMAE: 0.057685
-		WRMSE: 0.158660
+	Train
+		Cost = 0.157441
+
+		AUC  : 0.670919
+		NWMAE: 0.058305
+		WRMSE: 0.158648
 		
 
 	Test
-		Cost = 0.158491
+		Cost = 0.158191
 
-		AUC  : 0.671520
-		NWMAE: 0.057470
-		WRMSE: 0.159690	
+		AUC  : 0.669499
+		NWMAE: 0.058102
+		WRMSE: 0.159692
