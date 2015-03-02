@@ -5,19 +5,23 @@ Implement basic ML algos in octave on subset of KDD Cup 2012 dataset
 
 -----------------------------------------------------------------------------
 
-sort -R training.txt | head -n 3000000 > rand_sub.txt
-	This gives rand_sub.txt
+sort -R training.txt -T "(location)"| head -n 1000000 > rand_sub.txt
 
-split -l 4000000 training.txt 
-	This gives files of the name xaa, ..., xbl
+
+In R :
+
+data <- read.table("rand_sub.txt")
+
+train <- data[c(1:600000),]
+
+valid <- data[c(600001:800000),]
+
+test <- data[c(800001:1000000),]
+
+
 
 To find AUC
-	From Octave
-	data = load("rand_sub.txt");
-	csvwrite("csvinput.txt", data)
-
-	Then execute python code
-	python scoreKDD.py csvinput.txt output.txt
+	python scoreKDD.py input.csv output.csv
 
 *****************************************************************************
 

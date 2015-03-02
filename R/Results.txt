@@ -4,9 +4,21 @@ Test  - test_sub.txt  : 2 * 10^5 rows
 
 Classification Algorithms use : train_unrolled.txt (unrolled version of train_sub.txt) for training and train_sub.txt for finding AUC for training set
 
+Joined ones use :
+
+Non-unrolled
+train_improved_join_orig.txt
+valid_improved_join_orig.txt
+test_improved_join_orig.txt
+
+Unrolled
+train_improved_join.txt
+valid_improved_join.txt
+test_improved_join.txt
+
 1.) Linear Regression (using depth and postion)
 	
-	Time taken : 0.7895734 secs
+	Time taken : 1.014614 secs
 
 	Train
 	AUC  : 0.588407
@@ -20,7 +32,7 @@ Classification Algorithms use : train_unrolled.txt (unrolled version of train_su
 
 2.) Linear Regression (using all features except ad_urlhash)
 
-	Time taken : 1.508615 secs
+	Time taken : 1.564258 secs
 
 	Train
 	AUC  : 0.624310
@@ -34,7 +46,7 @@ Classification Algorithms use : train_unrolled.txt (unrolled version of train_su
 
 3.) Logistic Regression (using depth and position)
 
-	Time taken : 7.727872 secs
+	Time taken : 10.66534 secs
 
 	Train 
 	AUC  : 0.588407
@@ -48,7 +60,7 @@ Classification Algorithms use : train_unrolled.txt (unrolled version of train_su
 
 4.) Logistic Regression (using all features except ad_urlhash)
 
-	Time taken : 11.25781 secs
+	Time taken : 11.88907 secs
 
 	Train
 	AUC  : 0.629029
@@ -60,3 +72,30 @@ Classification Algorithms use : train_unrolled.txt (unrolled version of train_su
 	NWMAE: 0.061288
 	WRMSE: 0.160282
 
+5.) Linear Regression (joined)
+
+	Time taken : 1.696697 secs
+
+	Train
+	AUC  : 0.635856
+	NWMAE: 0.064370
+	WRMSE: 0.159305
+
+	Test
+	AUC  : 0.650858
+	NWMAE: 0.064371
+	WRMSE: 0.160195
+
+6.) Logistic Regression (joined) - Gives very poor results : equivalent to random prediction - here all predictions are 1
+
+	Time taken : 13.66307 secs
+
+	Train
+	AUC  : 0.500000
+	NWMAE: 0.965244
+	WRMSE: 0.978421
+
+	Test
+	AUC  : 0.500000
+	NWMAE: 0.966645
+	WRMSE: 0.979965
