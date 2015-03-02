@@ -152,3 +152,75 @@ Time taken - in seconds
 		AUC  : 0.658944
 		NWMAE: 0.059549
 		WRMSE: 0.159945	
+
+7.) Linear Regression (joined)
+
+	num_iters = 1000
+	best alpha = 0.01
+
+	Time taken for training = 49.639566
+
+	Min Cost for valid_data = 0.017451
+
+	Train 
+		Cost = 0.017461 
+
+		Max_difference = 0.988891
+		Min_difference = 0.000057
+		Avg_difference = 0.073485
+
+		AUC  : 0.635950
+		NWMAE: 0.064377
+		WRMSE: 0.159304
+	Test 
+		Cost = 0.017533 
+
+		Max_difference = 0.988891
+		Min_difference = 0.000555
+		Avg_difference = 0.073659
+
+		AUC  : 0.650879
+		NWMAE: 0.064380
+		WRMSE: 0.160195
+
+8.) Logistic Regression (joined)
+
+	Best lambda = 0
+	Cost for valid_data = 0.159289 
+
+	Time taken for training = 20.723193 
+
+	Train
+		Cost = 0.158998
+
+		AUC  : 0.637977
+		NWMAE: 0.061017
+		WRMSE: 0.159191
+
+	Test
+		Cost = 0.159551 
+
+		AUC  : 0.650314
+		NWMAE: 0.060958
+		WRMSE: 0.160100
+
+9.) Neural Network (joined)
+
+	Best lambda = 0 Opt hidden layer size = 6 iteration = 100
+
+	Cost for valid_data = 0.157980
+	Time taken for training = 330.882975
+	Train
+		Cost = 0.157768
+
+		AUC  : 0.670202
+		NWMAE: 0.057685
+		WRMSE: 0.158660
+		
+
+	Test
+		Cost = 0.158491
+
+		AUC  : 0.671520
+		NWMAE: 0.057470
+		WRMSE: 0.159690	
