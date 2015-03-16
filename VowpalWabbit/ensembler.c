@@ -5,7 +5,8 @@ int main(){
 	int i;
 	int click,impression;
 	char display_url[50],ad_id[20],advertiser_id[20],query_id[20],keyword_id[20],title_id[20],description_id[20],user_id[20];
-	int depth,position;
+	int depth;
+	int position;
 	float ensmbl1,ensmbl2;
 	float ctr;
 	FILE *fp1=fopen("ensemble_part1.txt","r");
