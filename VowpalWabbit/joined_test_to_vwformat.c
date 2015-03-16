@@ -6,7 +6,8 @@ int main(){
 	int click,impression;
 	char display_url[50],ad_id[20],advertiser_id[20],query_id[20],keyword_id[20],title_id[20],description_id[20],user_id[20];
 	int keyword_token_count,title_token_count,description_token_count,query_token_count;
-	int depth,position;
+	int depth;
+	int position;
 	float ctr;
 	FILE *fp1=fopen("join_test.txt","r");
 	FILE *fp2=fopen("test.data.vw","w");
