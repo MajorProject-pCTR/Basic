@@ -2,14 +2,17 @@
 #include<stdlib.h>
 
 int main(){
-	int position=0,i;
-	char rad[20];
-	float crim,zn,indus,chas,nox,rm,age,dis,tax,ptratio,b,lstat,medv;
-	FILE *fp1=fopen("housing.data","r");
+	int i;
+	int click,impression;
+	char display_url[50],ad_id[20],advertiser_id[20],query_id[20],keyword_id[20],title_id[20],description_id[20],user_id[20];
+	int depth,position;
+	float ctr;
+	FILE *fp1=fopen("valid_sub.txt","r");
 	FILE *fp2=fopen("input.data.vw","w");
-	for(i=1;i<505;i++){
-		fscanf(fp1, " %f %f %f %f %f %f %f %f %s %f %f %f %f %f", &crim, &zn, &indus, &chas, &nox, &rm, &age, &dis, rad, &tax, &ptratio, &b, &lstat, &medv);
-		fprintf(fp2, " %f | CRIM:%f ZN:%f INDUS:%f CHAS:%f NOX:%f RM:%f AGE:%f DIS:%f RAD:%s TAX:%f PTRATIO:%f B:%f LSTAT:%f\n", medv, crim, zn, indus, chas, nox, rm, age, dis, rad, tax, ptratio, b, lstat);
+	for(i=0;i<600000;i++){
+		fscanf(fp1, " %d %d %s %s %s %d %d %s %s %s %s %s", &click, &impression, display_url, ad_id, advertiser_id, &depth, &position, query_id, keyword_id, title_id, description_id, user_id);
+		ctr = (click * 1.0)/(impression * 1.0);
+		fprintf(fp2, " %f | ADID:%s ADVERID:%s DEP:%d POS:%d QID:%s KID:%s TID:%s DID:%s UID:%s\n", ctr, ad_id, advertiser_id, depth, position, query_id, keyword_id, title_id, description_id, user_id);
 	}
 	fclose(fp1);
 	fclose(fp2);
