@@ -1,0 +1,3 @@
+VW commands
+
+To train: vw -d input.data.vw -f predictor.vw -p train_predictions.txt

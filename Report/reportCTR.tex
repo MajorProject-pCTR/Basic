@@ -98,6 +98,31 @@ Here are the results that we obtained.
 \section{Results}
 \subsection{Linear regression}
 \subsubsection{Python}
+Before join\\
+
+\begin{center}
+ \begin{tabular}{|c | c | c||} 
+ \hline
+ & Training & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.502827 & 0.474355\\
+ \hline
+\end{tabular}
+\end{center}
+
+Total time for training and testing : 34.114s\\
+After join\\
+\begin{center}
+ \begin{tabular}{|c | c | c||} 
+ \hline
+ & Training & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.507160 & 0.474355\\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Total time for training and testing : 28.680s\\
 \subsubsection{Vowpal Wabbit}
 
 Linear Regression:\\
@@ -107,9 +132,9 @@ Linear Regression:\\
  \hline
  & Training & Testing\\ [0.5ex] 
  \hline\hline
-AUC & 0.589910 & 21.828s\\ 
+AUC & 0.589910 & 0.626719\\ 
  \hline
-Time & 0.626719 & 7.759s\\ 
+Time & 21.828s & 7.759s\\ 
  \hline
 \end{tabular}
 \end{center}
@@ -120,9 +145,9 @@ Linear Regression with quantile loss function:\\
  \hline
  & Training & Testing\\ [0.5ex] 
  \hline\hline
-AUC & 0.511265 & 20.827s\\ 
+AUC & 0.511265 & 0.511187\\ 
  \hline
-Time & 0.511187 & 7.257s\\ 
+Time & 20.827s & 7.257s\\ 
  \hline
 \end{tabular}
 \end{center}
@@ -131,41 +156,104 @@ Time & 0.511187 & 7.257s\\
 
 \subsection{Logistic regression}
 \subsubsection{Python}
+Before join\\
+
+\begin{center}
+ \begin{tabular}{|c | c | c||} 
+ \hline
+ & Training & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.502827 & 0.474355\\
+ \hline
+\end{tabular}
+\end{center}
+
+Total time for training and testing : 34.114s\\
+After join\\
+\begin{center}
+ \begin{tabular}{|c | c | c||} 
+ \hline
+ & Training & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.586956 & 0.604606\\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Total time for training and testing : 28.680s\\
 \subsubsection{R}
 
 \subsection{Neural networks}
 \subsubsection{Vowpal Wabbit}
 Before joining the main data set with the additional files, Neural Network gave best results with 8 nodes in the hidden layer:\\
 
-Training:\\
-AUC  : 0.514684\\
-Time : 0m29.861s\\
-
-Validation:\\
-AUC  : 0.632026\\
-Time : 0m8.509s\\\\
-
-Testing:\\
-AUC  : 0.647415\\
-Time : 0m17.910s\\\\
+\begin{center}
+ \begin{tabular}{|c | c | c | c||} 
+ \hline
+ & Training & Validation & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.514684 & 0.632026 & 0.647415\\
+ \hline
+Time & 29.861s & 8.509s & 17.910s\\ 
+ \hline
+\end{tabular}
+\end{center}
 
 After joining the main data set with the additional files, Neural Network gave best results with 5 nodes in the hidden layer:\\
 
-Training:\\
-AUC  : 0.637832\\
-Time : 0m11.455s\\\\
-
-Validation:\\
-AUC  : 0.604052\\
-Time : 0m9.341s\\\\
-
-Testing:\\
-AUC  : 0.602947\\
-Time : 0m8.078s\\\\
-R\\
+\begin{center}
+ \begin{tabular}{|c | c | c | c||} 
+ \hline
+ & Training & Validation & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.637832 & 0.604052 & 0.602947\\
+ \hline
+Time & 11.455s & 9.341s & 8.078s\\ 
+ \hline
+\end{tabular}
+\end{center}
+\subsubsection{R}
 
 \subsection{Random forests}
-\subsubsection{Python}
+Before join\\
+
+\begin{center}
+ \begin{tabular}{|c | c | c||} 
+ \hline
+ & Training & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.984347 &  0.622583\\
+ \hline
+\end{tabular}
+\end{center}
+
+Total time for training and testing : 2m20.759s\\
+After join\\
+\begin{center}
+ \begin{tabular}{|c | c | c||} 
+ \hline
+ & Training & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.980344 & 0.598331\\ 
+ \hline
+\end{tabular}
+\end{center}
+
+Total time for training and testing : 2m20.759s\\
+\subsection{Ensemble}
+Ensemble of Linear Regression and Nueral Network with 8 nodes in hidden layer(Using Linear Regression):\\
+
+\begin{center}
+ \begin{tabular}{|c | c | c||} 
+ \hline
+ & Training & Testing\\ [0.5ex] 
+ \hline\hline
+AUC & 0.556894 & 0.533243\\ 
+ \hline
+Time & 28.621s & 10.838s\\ 
+ \hline
+\end{tabular}
+\end{center}
 
 \section{Proposed Method}
 We are proposing to improve the newly found AUC by different means by varying the parameter values, deriving new features by combining existing features and trying out alternate combinations of basic algorithms for blending.
