@@ -1,0 +1,59 @@
+Check
+
+NN
+	python scoreKDD.py train_improved_join_orig.csv nn_train.csv 
+	AUC  : 0.666881
+	NWMAE: 0.059373
+	WRMSE: 0.158714
+
+	python scoreKDD.py test_improved_join_orig.csv nn_test.csv 
+	AUC  : 0.664402
+	NWMAE: 0.059566
+	WRMSE: 0.159780
+
+log
+
+	python scoreKDD.py train_improved_join_orig.csv log_train.csv 
+	AUC  : 0.638545
+	NWMAE: 0.061045
+	WRMSE: 0.159196
+
+	python scoreKDD.py test_improved_join_orig.csv log_test.csv 
+	AUC  : 0.650791
+	NWMAE: 0.060981
+	WRMSE: 0.160105
+
+lin
+
+	python scoreKDD.py train_improved_join_orig.csv lin_train.csv 
+	AUC  : 0.635856
+	NWMAE: 0.064370
+	WRMSE: 0.159305
+
+	python scoreKDD.py test_improved_join_orig.csv lin_test.csv 
+	AUC  : 0.650858
+	NWMAE: 0.064371
+	WRMSE: 0.160195
+
+
+Results
+
+	Best lambda = 0 Opt hidden layer size = 1 iteration = 100
+
+	Cost for valid_data = 0.158059
+	Time taken for training = 190.248439
+
+	Train
+		Cost = 0.157779
+
+		AUC  : 0.666976
+		NWMAE: 0.059533
+		WRMSE: 0.158711
+		
+
+	Test
+		Cost = 0.158384
+
+		AUC  : 0.664057
+		NWMAE: 0.059733
+		WRMSE: 0.159781

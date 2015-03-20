@@ -1,7 +1,11 @@
 Basic
 =====
 
-Implement basic ML algos in octave on subset of KDD Cup 2012 dataset 
+Implement ML algos in octave on subset of KDD Cup 2012 dataset 
+
+On just a subset - hence the name "Basic" !
+
+Work on whole data coming soon....
 
 -----------------------------------------------------------------------------
 
