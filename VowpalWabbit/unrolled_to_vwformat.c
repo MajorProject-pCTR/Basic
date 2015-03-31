@@ -9,13 +9,13 @@ int main(){
 	float ctr;
 	FILE *fp1=fopen("train_unrolled_sub.txt","r");
 	FILE *fp2=fopen("input.data.vw","w");
-	for(i=0;i<600000;i++){
+	for(i=0;i<920848;i++){
 		fscanf(fp1, " %d %s %s %s %d %d %s %s %s %s %s", &click, display_url, ad_id, advertiser_id, &depth, &position, query_id, keyword_id, title_id, description_id, user_id);
 		if(click == 0){
-			fprintf(fp2, "-1 | ADID:%s ADVERID:%s DEP:%d POS:%d QID:%s KID:%s TID:%s DID:%s UID:%s\n", ctr, ad_id, advertiser_id, depth, position, query_id, keyword_id, title_id, description_id, user_id);
+			fprintf(fp2, "-1 | ADID:%s ADVERID:%s DEP:%d POS:%d QID:%s KID:%s TID:%s DID:%s UID:%s\n", ad_id, advertiser_id, depth, position, query_id, keyword_id, title_id, description_id, user_id);
 		}
 		else{
-			fprintf(fp2, "1 | ADID:%s ADVERID:%s DEP:%d POS:%d QID:%s KID:%s TID:%s DID:%s UID:%s\n", ctr, ad_id, advertiser_id, depth, position, query_id, keyword_id, title_id, description_id, user_id);
+			fprintf(fp2, "1 | ADID:%s ADVERID:%s DEP:%d POS:%d QID:%s KID:%s TID:%s DID:%s UID:%s\n", ad_id, advertiser_id, depth, position, query_id, keyword_id, title_id, description_id, user_id);
 		}
 	}
 	fclose(fp1);
