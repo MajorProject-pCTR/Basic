@@ -25,7 +25,7 @@ int main(){
 			if(input_file.eof())
 				break;
 	
-			output_file << if_click << " " << pred_ctr;
+			output_file << if_click << " " << pred_ctr << "\n";
 
 		}
 		input_file.close();
