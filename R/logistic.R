@@ -6,9 +6,9 @@ logistic <- function(all=TRUE) {
 	print("Unrolled data ready")
 
 	if(all){
-
+		start <- Sys.time()
 		glm.fit=glm(if_click~ad_id+advertiser_id+depth+position+query_id+keyword_id+title_id+desc_id+user_id, data=ad_data, family=binomial)
-
+		end <- Sys.time()
 	}
 	else{
 		start <- Sys.time()
