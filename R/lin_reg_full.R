@@ -1,6 +1,6 @@
-lin_reg <- function(all=TRUE) {
+lin_reg_full <- function(all=TRUE) {
 start <- Sys.time()
-	ad_data <- read.table("train_sub.txt")
+	ad_data <- read.table("training.txt")
 	names(ad_data) <- c("click", "impression", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "query_id", "keyword_id", "title_id", "desc_id", "user_id")
 
 	print("Loaded the data")
@@ -18,15 +18,9 @@ start <- Sys.time()
 
 	print("Model trained")
 
-	rm(ad_data)
 	h<-predict(lm.fit)
-	write(h,file="pred_train.csv",sep="\n")
+	write(h,file="pred_train_full.csv",sep="\n")
 
-	ad_data <- read.table("test_sub.txt")
-	names(ad_data) <- c("click", "impression", "ad_urlhash", "ad_id", "advertiser_id", "depth", "position", "query_id", "keyword_id", "title_id", "desc_id", "user_id")
-
-	h<-predict(lm.fit,ad_data)
-	write(h,file="pred_test.csv", sep="\n")
 end <- Sys.time()
 	diff <- end - start
 }

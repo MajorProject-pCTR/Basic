@@ -18,7 +18,7 @@ int main(){
 	if(input_file.is_open() && output_file.is_open()){
 		while(true){
 
-			input_file >> click >> impression >> display_url >> ad_id >> advertiser_id >> depth >> position >> query_id >> keyword_id >> title_id >> description_id >> user_id;	
+			input_file >> click >> impression >> display_url >> ad_id >> advertiser_id >> depth >> position >> query_id >> keyword_id >> title_id >> description_id >> user_id;
 
 			if(input_file.eof())
 				break;
@@ -29,7 +29,7 @@ int main(){
 			}
 	
 			for(j=1; j<=impression-click; ++j){
-				output_file << "0 | " << "ad_id:" << ad_id << " " << "advertiser_id:" << advertiser_id << " " << "depth:" << depth << " " << "position:" << position << " " << "query_id:" << query_id << " " << "keyword_id:" << keyword_id << " " << "title_id:" << title_id << " " << "description_id:" << description_id << " " << "user_id:" << user_id << "\n";
+				output_file << "-1 | " << "ad_id:" << ad_id << " " << "advertiser_id:" << advertiser_id << " " << "depth:" << depth << " " << "position:" << position << " " << "query_id:" << query_id << " " << "keyword_id:" << keyword_id << " " << "title_id:" << title_id << " " << "description_id:" << description_id << " " << "user_id:" << user_id << "\n";
 				index++;
 			}
 
