@@ -7,9 +7,9 @@ int main(){
 	char display_url[50],ad_id[20],advertiser_id[20],query_id[20],keyword_id[20],title_id[20],description_id[20],user_id[20];
 	int depth,position;
 	float ctr;
-	FILE *fp1=fopen("train_sub.txt","r");
+	FILE *fp1=fopen("train_final.txt","r");
 	FILE *fp2=fopen("input.data.vw","w");
-	for(i=0;i<600000;i++){
+	for(i=1;i<=119711284;i++){
 		fscanf(fp1, " %d %d %s %s %s %d %d %s %s %s %s %s", &click, &impression, display_url, ad_id, advertiser_id, &depth, &position, query_id, keyword_id, title_id, description_id, user_id);
 		ctr = (click * 1.0)/(impression * 1.0);
 		fprintf(fp2, " %f | ADID:%s ADVERID:%s DEP:%d POS:%d QID:%s KID:%s TID:%s DID:%s UID:%s\n", ctr, ad_id, advertiser_id, depth, position, query_id, keyword_id, title_id, description_id, user_id);

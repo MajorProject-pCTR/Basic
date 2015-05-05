@@ -1,3 +1,10 @@
 VW commands
 
 To train: vw -d input.data.vw -f predictor.vw -p train_predictions.txt
+
+time vw -d test.data.vw -t -i predictor.vw -p test_predictions.txt
+time cat input.data.vw | vw --nn 5 -p train_predictions.txt -f predictor.vw
+
+time vw input.data.vw -f predictor.vw -p train_predictions.txt --loss_function=logistic
+time vw input.data.vw -f predictor.vw -p train_predictions.txt --link logistic
+time vw input.data.vw -f predictor.vw -p train_predictions.txt --link=logistic
