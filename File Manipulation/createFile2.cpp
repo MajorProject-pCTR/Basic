@@ -24,12 +24,12 @@ int main(){
 				break;
 
 			for(j=1; j<=click; ++j){
-				output_file index << " " << 1 << " " << impression  << " " << ad_id  << " " << advertiser_id  << " " << depth  << " " << position << " " << ad_url_freq << " " << user_id_freq << " " << gender << " " << age << " " << description_id_freq << " " << desc_id_tokencnt << " " << title_id_freq << " " << titid_tokencnt << " " << keyword_id_freq << " " << purc_k_id_tokencnt << " " << query_id_freq << " " << qid_tokencnt << "\n";
+				output_file << 1 << " " << ad_id << " " << advertiser_id << " " << depth  << " " << position << " " << ad_url_freq << " " << user_id_freq << " " << gender << " " << age << " " << description_id_freq << " " << desc_id_tokencnt << " " << title_id_freq << " " << titid_tokencnt << " " << keyword_id_freq << " " << purc_k_id_tokencnt << " " << query_id_freq << " " << qid_tokencnt << "\n";
 				index++;
 			}
 	
 			for(j=1; j<=impression-click; ++j){
-				output_file index << " " << 0 << " " << impression  << " " << ad_id  << " " << advertiser_id  << " " << depth  << " " << position << " " << ad_url_freq << " " << user_id_freq << " " << gender << " " << age << " " << description_id_freq << " " << desc_id_tokencnt << " " << title_id_freq << " " << titid_tokencnt << " " << keyword_id_freq << " " << purc_k_id_tokencnt << " " << query_id_freq << " " << qid_tokencnt << "\n";
+				output_file << 0 << " " << ad_id << " " << advertiser_id << " " << depth  << " " << position << " " << ad_url_freq << " " << user_id_freq << " " << gender << " " << age << " " << description_id_freq << " " << desc_id_tokencnt << " " << title_id_freq << " " << titid_tokencnt << " " << keyword_id_freq << " " << purc_k_id_tokencnt << " " << query_id_freq << " " << qid_tokencnt << "\n";
 				index++;
 			}
 
